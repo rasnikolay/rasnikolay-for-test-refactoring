@@ -1,6 +1,6 @@
 class ServerApi {
   public processAddAccountRequest(url: string, account: TAccount) {
-    return this.fetch('POST', url, verification);
+    return this.fetch('POST', url, account);
   }
 
   public sendDeleteAccountRequest(url: string, accountId: string) {
