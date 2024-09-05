@@ -1,5 +1,3 @@
-
-
 type TPayment = {
   amount: number;
   rcCode: number;

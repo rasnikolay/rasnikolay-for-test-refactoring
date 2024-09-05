@@ -1,20 +1,15 @@
 class ScreenShare {
-  startPresentationWithoutSound(mediaStream: MediaStream) {
+  startPresentationWithoutSound(mediaStream: MediaStream, isExistsAudioTracks: boolean) {
     this.stopPresentation();
 
     this.startPresentation(mediaStream);
-
-    const isExistsAudioTracks = mediaStream.getAudioTracks().length > 0;
 
     if (isExistsAudioTracks) {
       this.muteAudio();
     }
   }
 
-  stopPresentation() { 
-  }
-  startPresentation(mediaStream: MediaStream) { 
-  }
-  muteAudio() { 
-  }
+  stopPresentation() {}
+  startPresentation(mediaStream: MediaStream) {}
+  muteAudio() {}
 }

@@ -3,15 +3,15 @@ class MoogDiver {
   splines: List<Spline>;
 
   public dive(reason: string) {
-    saturateGradient();
+    this.saturateGradient();
 
-    reticulateSplines();
+    this.reticulateSplines();
 
-    diveForMoog(reason);
+    this.diveForMoog(reason);
   }
 
   private saturateGradient() {
-    this.gradient = // somoe logic
+    this.gradient = // some logic
   }
 
   private reticulateSplines() {

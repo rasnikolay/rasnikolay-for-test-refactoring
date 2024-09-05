@@ -1,19 +1,18 @@
 type TMutableList<T> = T[];
 
 enum WarningType {
-  LEGACY_CODE_DEPENDENCY
+  LEGACY_CODE_DEPENDENCY,
 }
 
 type TWarning = {
-  type: WarningType
+  type: WarningType;
 };
 
 const Warning = (type: WarningType): TWarning => {
   return {
-    type
+    type,
   };
 };
-
 
 const addError = (errors: TMutableList<TWarning>) => {
   errors.push(Warning(WarningType.LEGACY_CODE_DEPENDENCY));

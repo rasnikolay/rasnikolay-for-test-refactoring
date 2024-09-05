@@ -1,6 +1,10 @@
 class Order {
   private customer: Customer;
 
+  constructor() {
+    this.customer = new Customer();
+  }
+
   getTotalPrice(): number {
     return this.customer.calculateTotalPrice();
   }
