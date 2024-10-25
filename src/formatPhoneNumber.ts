@@ -1,7 +1,11 @@
-function calculateTotalPrice(quantity, price) {
+function calculateTotalPrice(quantity: number, price: number): number {
   return quantity * price;
 }
 
-function formatPhoneNumber(number) {
-  return `(${number.slice(0, 3)}) ${number.slice(3, 6)}-${number.slice(6)}`;
+function formatPhoneNumber(phoneNumber: string): string {
+  return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6)}`;
 }
+
+/* Плохо: нет аннотаций, нейминг аргумента в formatPhoneNumber
+   Улучшено: добавлены аннотации, заменена number на formatPhoneNumber
+ */

@@ -1,14 +1,8 @@
 const render = (size: number) => {
-  const html = new StringBuffer('<hr');
-
-  if (size > 0) {
-    html
-      .append(' size="')
-      .append(size + 1)
-      .append('"');
-  }
-
-  html.append('>');
-
-  return html.toString();
+  const sizeAtr = size > 0 ? ` size="${size + 1}"` : '';
+  return `<hr${sizeAtr}>`;
 };
+
+/* Загуглил: StringBuffer легаси, лучше использовать JS join/concat, награмождение append
+   Улучшено: при помощи тернарника и `` можно сразу вернуть необходимую строку
+ */
