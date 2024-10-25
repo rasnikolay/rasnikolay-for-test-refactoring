@@ -15,5 +15,11 @@ const Warning = (type: WarningType): TWarning => {
 };
 
 const addError = (errors: TMutableList<TWarning>) => {
-  errors.push(Warning(WarningType.LEGACY_CODE_DEPENDENCY));
+  return [...errors, Warning(WarningType.LEGACY_CODE_DEPENDENCY)];
 };
+
+/* Плохо: мы мутируем массив errors, это плохо в рамках принципов чистой функции
+
+  Улучшено: Для копии исходного массива добавляем новое значение и таким образом возращаем новый массив
+
+ */

@@ -6,3 +6,5 @@ class Car {
   private price: number;
   private mileage: number;
 }
+
+/* По идее можно использовать constructor в классах и геттер/сеттер для доступа. С этим у меня проблемы, нужно будет изучить */

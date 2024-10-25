@@ -1,4 +1,9 @@
 class DaoCacheConfigProperties {
-  alive: number; // alive cache time in days
-  elements: number; // maximum elements in cache
+  aliveInDays: number; // alive cache time in days
+  maxElements: number; // maximum elements in cache
 }
+
+/* Плохо: неполные имена переменных
+
+   Улучшено: перименовано для более яснохарактеризующего нейминга при чтении кода
+*/

@@ -4,18 +4,20 @@ enum ShapeType {
 }
 
 function calculateArea(shape: ShapeType, radiusOrSide: number): number {
-  let area = 0;
 
   switch (shape) {
     case ShapeType.Circle:
-      area = Math.PI * Math.pow(radiusOrSide, 2);
-      break;
+      return  Math.PI * Math.pow(radiusOrSide, 2);
     case ShapeType.Square:
-      area = Math.pow(radiusOrSide, 2);
-      break;
+      return Math.pow(radiusOrSide, 2);
+    default:
+      return 0;
   }
-
-  return area;
 }
 
 console.log(calculateArea(ShapeType.Circle, 5)); // Output: 78.54
+
+/* Плохо: switch было бы неплохо использовать, если бы перечисление было бы больше и точно излишняя переменная area
+
+   Улучшено: можно заменить switch на if, но так как пример абстрактный, возможно перечислений - типов фигур будет больше
+ */
