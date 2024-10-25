@@ -1,37 +1,19 @@
-const updateUserHandle = (handle) => {
+const updateUserData = (url, data) => {
   if (!isLoggedIn()) {
     toLoginPage();
-
     return;
   }
 
   const token = getToken();
   const headers = getHeaders(token);
 
-  return fetch(`${domain}/v1/users/handle`, {
+  return fetch(`${domain}/v1/users/${url}`, {
     method: 'PUT',
     headers,
-    body: JSON.stringify({
-      handle,
-    }),
+    body: JSON.stringify(data),
   });
 };
 
-const updateUserInterests = (interestUUIDs) => {
-  if (!isLoggedIn()) {
-    toLoginPage();
-
-    return;
-  }
-
-  const token = getToken();
-  const headers = getHeaders(token);
-
-  return fetch(`${domain}/v1/users/interests`, {
-    method: 'PUT',
-    headers,
-    body: JSON.stringify({
-      interestUUIDs,
-    }),
-  });
-};
+/* Плохо: дублирование логики
+   Улучшено: один метод
+*  */

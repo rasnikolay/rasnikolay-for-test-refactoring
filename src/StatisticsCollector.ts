@@ -20,3 +20,5 @@ class StatisticsCollector {
     }
   }
 }
+
+/* если у нас TFormatType всего 2 значение имеет, то логика switch избыточна */

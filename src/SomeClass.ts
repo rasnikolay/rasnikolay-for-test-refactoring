@@ -1,14 +1,5 @@
 class SomeClass {
-
-  private neverUsedMethod() {
-      console.log("This function is called");
-  }
-
-  public someMethod() {
-      if (false) {
-          doSomethingThatNeverHappens();
-      }
-
+    public someMethod() {
       try {
           this.doSomethingSafe();
       } catch (Exception e) {
@@ -20,3 +11,6 @@ class SomeClass {
      console.log('Safe operation')
   }
 }
+
+/* Плохо: имеется неиспользуемый метод, if (false) никогда не выполнится
+*  Улучшено: удалено лишнее */
