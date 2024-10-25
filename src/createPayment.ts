@@ -7,3 +7,8 @@ const createPayment = (isToken: Boolean) => {
     userAccount.createCardPayment(cardNumber).postTransactionToServer();
   }
 };
+
+/* Плохо: возможно, читаемость кода
+
+   Что можно улучшить: переписать на тернарник, но тогда константы будут излишни
+ */

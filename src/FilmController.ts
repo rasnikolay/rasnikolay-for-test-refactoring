@@ -8,3 +8,5 @@ class FilmController {
     return this.popupOpened;
   }
 }
+
+/* Вероятно создание экземляра Popup в методее openDetails - плохая практика */

@@ -9,3 +9,5 @@ class UnlimitedStack<T> implements Stack<T> {
     return 0;
   }
 }
+
+/* Возможно внутри UnlimitedStack в методе percentFull нужно выбрасывать ошибку */

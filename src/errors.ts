@@ -1,11 +1,11 @@
-const hasNotFoundStatus = (response: Response) => {
-  return response.status === HttpStatusCode.NOT_FOUND_404;
+const hasStatus = (response: Response, statusCode: number) => {
+  return response.status === statusCode;
 };
 
-const hasForbiddenStatus = (response: Response) => {
-  return response.status === HttpStatusCode.FORBIDDEN_403;
-};
+const hasNotFoundStatus = (response: Response) => hasStatus(response, HttpStatusCode.NOT_FOUND_404);
+const hasForbiddenStatus = (response: Response) => hasStatus(response, HttpStatusCode.FORBIDDEN_403);
+const hasServiceUnavailableStatus = (response: Response) => hasStatus(response, 503);
 
-const hasServiceUnavailableStatus = (response: Response) => {
-  return response.status === 503;
-};
+/* Плохо: нарушен принцип DRY не повторяйся.
+   Улучшено: переиспольуземость при помощи hasStatus
+ */

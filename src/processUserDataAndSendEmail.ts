@@ -1,7 +1,10 @@
-function processUserDataAndSendEmail(user: User) {
-  // Обработка данных пользователя
+function processUserData(user: User) {
   user.processData();
+  sendUserEmail(user);
+}
 
-  // Отправка электронной почты
+function sendUserEmail(user: User) {
   emailService.sendEmail(user.email, 'Данные обработаны успешно');
 }
+
+/* Улучшено: разделена логика функций*/

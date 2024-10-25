@@ -1,2 +1,5 @@
-if (!buffer.shouldNotCompact()) {
+const isShouldBufferCompact = () => !buffer.shouldNotCompact()
+
+if (isShouldBufferCompact()) {
+  //логика
 }

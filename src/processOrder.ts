@@ -6,3 +6,5 @@ function processOrder(item: unknown, isExpress: boolean) {
     // Логика для стандартной доставки
   }
 }
+
+/* Тут можно использовать тернарник, если это умесно */

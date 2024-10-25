@@ -1,8 +1,8 @@
 class Order {
   private customer: Customer;
 
-  constructor() {
-    this.customer = new Customer();
+  constructor(customer: Customer) {
+    this.customer = customer;
   }
 
   getTotalPrice(): number {
@@ -17,3 +17,5 @@ class Customer {
     // вычисление общей цены на основе items
   }
 }
+
+/* Всё же экземляр в конструкторе можно заменить на такой функционал - но пока не знаю зачем это нужно */
